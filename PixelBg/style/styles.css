@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(175, 160, 228);
+    cursor: grabbing;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.container span{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20px;
+    min-width: 20px;
+}
+
+.container span::before{
+    content: '';
+    position: absolute;
+    background: url(https://www.shutterstock.com/image-photo/stunning-galaxy-elements-this-image-260nw-1717095772.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    transition: 5s;
+    opacity: 0;
+    pointer-events: none;
+    width: 400%;
+    height: 400%;
+    border-radius: 10px;
+}
+
+.container span:hover::before{
+    transition: 0s;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+}
